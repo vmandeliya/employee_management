@@ -22,6 +22,7 @@ public class EmployeeController {
 
 	@RequestMapping(value= "/employee/{maxAge}", method= RequestMethod.POST)
 	public List<Employee> createEmployee(@RequestBody List<Employee> newemp,@PathVariable int maxAge) {
+		System.out.println("Hello i am EmployeeController");
 		return service.getEmployeesByAge(newemp,maxAge);
 	}
 
